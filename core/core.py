@@ -7,12 +7,22 @@ class Core:
         self.plugins = {}
 
     def load_plugins(self, plugin_folder="plugins"):
-        for filename in os.listdir(plugin_folder):
-            if filename.endswith(".py") and filename != "__init__.py":
-                plugin_name = filename[:-3]
-                module = importlib.import_module(f"{plugin_folder}.{plugin_name}")
-                plugin_class = getattr(module, "Plugin")
-                self.plugins[plugin_name] = plugin_class()
+        plugin_files = [
+            filename for filename in os.listdir(plugin_folder)
+            if filename.endswith(".py") and filename != "__init__.py"
+        ]
+        
+        if not plugin_files:
+            print("No plugins found. Please add plugins to the 'plugins' folder.")
+            return False  # Keine Plugins gefunden
+        
+        for filename in plugin_files:
+            plugin_name = filename[:-3]
+            module = importlib.import_module(f"{plugin_folder}.{plugin_name}")
+            plugin_class = getattr(module, "Plugin")
+            self.plugins[plugin_name] = plugin_class()
+        
+        return True  # Plugins erfolgreich geladen
 
     def process_text(self, input_file, output_file, plugin_name):
         if plugin_name not in self.plugins:

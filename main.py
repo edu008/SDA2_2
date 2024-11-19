@@ -3,7 +3,11 @@ from core.core import Core
 
 def main():
     core = Core()
-    core.load_plugins()
+    
+    # Plugins laden
+    plugins_loaded = core.load_plugins()
+    if not plugins_loaded:
+        return  # Programm stoppen, wenn keine Plugins verfügbar sind
 
     print("Available Plugins:")
     plugins = core.list_plugins()
