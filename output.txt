@@ -1,0 +1,3 @@
+'plugin' found 1 times in the text.
+Original Text:
+This is a test file with some sample text for plugin testing.
