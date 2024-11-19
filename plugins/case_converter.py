@@ -1,13 +1,14 @@
 # plugins/case_converter.py
 class Plugin:
-    def process(self, text: str) -> str:
-        print("1. Uppercase\n2. Lowercase\n3. Capitalize Each Word")
-        choice = input("Choose an option: ")
-        if choice == "1":
+    def __init__(self):
+        self.options_required = True  # Zeigt der UI, dass eine Auswahl benötigt wird
+
+    def process(self, text: str, option: str = None) -> str:
+        if option == "Uppercase":
             return text.upper()
-        elif choice == "2":
+        elif option == "Lowercase":
             return text.lower()
-        elif choice == "3":
+        elif option == "Capitalize Each Word":
             return text.title()
         else:
-            return text
+            return "Invalid option selected."
