@@ -201,7 +201,7 @@ In dieser Anleitung werde ich die Option "Uppercase" wählen. Sie können auch d
 4. Sobald Sie "case_coverter" gewählt haben erscheint unten noch ein neuer Button "Choose Option".
 5. Klicken Sie auf "Choose Option" und wählen Sie "Uppercase" aus:
 
-![alt text](image.png)
+![alt text](./images/image-16.png)
 
 5. Klicken Sie auf "Process Text":
 
@@ -215,21 +215,21 @@ Mit diesem Plugin können Sie in der Datei nach einem gewünschen Word suchen.
 4. Sobald Sie "text_search" gewählt haben erscheint unten ein Textfeld.
 5. Bitte geben Sie im leeren Textfeld nach dem Wort aus, die Sie im Text suchen möchten und klicken Sie auf "Process Text":
 
-![alt text](image-1.png)
+![alt text](./images/image-17.png)
 
 6. Nach dem sollte das Resultat unten erscheinen:
 
-![alt text](image-2.png)
+![alt text](./images/image-18.png)
 
 7. Mit "Save Output" kann die Ausgabe als eine Textdatei am gewünschten Ort gespeichert werden.
 
 8. Wenn Sie gespeichert haben, sollte die nachfolgende Meldung erscheinen:
 
-![alt text](image-3.png)
+![alt text](./images/image-19.png)
 
 9. Der Inhalt der Datei sollte so aussehen:
 
-![alt text](image-4.png)
+![alt text](./images/image-20.png)
 
 ### 5. **WordCounter Plugin**
 
@@ -240,11 +240,11 @@ Mit diesem Plugin können Sie die Wörter im Textdatei zählen.
 3. Wählen Sie das Plugin "word_counter" aus der Dropdown-Liste.
 4. Klicken Sie anschliessend auf "Process Text":
 
-![alt text](image-5.png)
+![alt text](./images/image-21.png)
 
 5. Nach dem wird das folgende Inhalt unten angezeigt:
 
-![alt text](image-6.png)
+![alt text](./images/image-22.png)
 
 Es sind total 15 Wörter in der Datei "password.txt" enthalten.
 
@@ -252,10 +252,10 @@ Es sind total 15 Wörter in der Datei "password.txt" enthalten.
 
 7. Wenn Sie erfolgreich gespeichert haben, sollte die nachfolgende Meldung erscheinen:
 
-![alt text](image-7.png)
+![alt text](./images/image-23.png)
 
 8. Wenn Sie nun die Datei öffnen, sollte der folgende Inhalt ersichtlich sein:
 
-![alt text](image-8.png)
+![alt text](./images/image-24.png)
 
 ---
