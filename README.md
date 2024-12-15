@@ -47,7 +47,7 @@ Jetzt sollten die Daten aus dem Git-Repository auf deinem Computer im angegebene
 
 ---
 
-## **Schritt 1: Abhängigkeiten installieren**
+## **Schritt 2: Abhängigkeiten installieren**
 1. Öffne die  Eingabeaufforderung.  
 
 2. Navigiere zu dem Ordner, in dem sich das Repository befindet:
