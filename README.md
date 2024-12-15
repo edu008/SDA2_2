@@ -56,19 +56,32 @@ Jetzt sollten die Daten aus dem Git-Repository auf deinem Computer im angegebene
 
 3. Abhängigkeiten installieren
 ```bash
-    git clone https://github.com/edu008/SDA2_2.git
+    pip install -r requirements.txt
 ```
 
+Mein Beispiel:
 
-2. **Abhängigkeiten installieren**:
-   \`\`\`bash
-   pip install -r requirements.txt
-   \`\`\`
+![alt text](image-1.png)
+
+---
+
+## **Schritt 3: Programm starten**
+1. Öffne die  Eingabeaufforderung.  
+
+2. Navigiere zu dem Ordner, in dem sich das Repository befindet:
 
 3. **Programm starten**:
-   \`\`\`bash
-   python main.py
-   \`\`\`
+```bash
+    python main.py
+```
+
+Mein Beispiel:
+
+![alt text](image-2.png)
+
+Nach dem sollte sich automatisch das Programm öffnen und sieht so aus:
+
+![alt text](image-3.png)
 
 ---
 
