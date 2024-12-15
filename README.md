@@ -1,78 +1,124 @@
 
 # Textprozessor mit Plugins
 
-Dies ist eine Textverarbeitungsanwendung, die mit Python und Tkinter entwickelt wurde. Sie unterstützt Plugins für Verschlüsselung, Entschlüsselung und andere Textverarbeitungsfunktionen. Die Anwendung ermöglicht es Benutzern, eine Textdatei auszuwählen, ein Plugin anzuwenden und das verarbeitete Ergebnis anzuzeigen oder zu speichern.
+Dies ist eine flexible Textverarbeitungsanwendung, die mit Python und Tkinter entwickelt wurde. Sie unterstützt Plugins wie Verschlüsselung, Entschlüsselung und andere Textmanipulationsfunktionen. Die Benutzer können Dateien laden, Plugins anwenden und die Ergebnisse anzeigen oder speichern.
 
-## Funktionen
+## Hauptfunktionen
 
-- Wählen Sie eine Textdatei aus, die verarbeitet werden soll.
-- Wählen Sie ein Plugin aus (z. B. Verschlüsselung, Entschlüsselung).
-- Geben Sie zusätzliche Eingaben wie Schlüssel ein, falls vom Plugin erforderlich.
-- Zeigen Sie den verarbeiteten Text in der Benutzeroberfläche an.
-- Speichern Sie das verarbeitete Ergebnis in einer Datei.
-- Für Verschlüsselungs-Plugins wird der Schlüssel in einem separaten Fenster angezeigt und kann in die Zwischenablage kopiert werden.
+- **Datei auswählen**: Laden Sie Textdateien zur Verarbeitung.
+- **Plugin auswählen**: Verschiedene Plugins anwenden (z. B. Verschlüsselung, Entschlüsselung).
+- **Zusätzliche Eingaben**: Geben Sie erforderliche Parameter (wie Schlüssel) ein.
+- **Ergebnis anzeigen**: Verarbeiteter Text wird direkt in der Benutzeroberfläche angezeigt.
+- **Speichern**: Speichern Sie die Ergebnisse in einer Datei.
+- **Verschlüsselungsschlüssel-Management**: Anzeigen und Kopieren von Verschlüsselungsschlüsseln.
+
+---
 
 ## Voraussetzungen
 
-- Python 3.x
-- Benötigte Python-Bibliotheken:
-  - `tkinter` (Standardbibliothek)
-  - `cryptography` (für Plugins wie Verschlüsselung/Entschlüsselung)
+### 1. Software
+- **Python 3.x**: Stellen Sie sicher, dass Python installiert ist.
 
-## Installation der Anforderungen
+### 2. Benötigte Python-Bibliotheken
+Installieren Sie folgende Bibliotheken:
+- `tkinter` (Standardbibliothek)
+- `cryptography` (für Verschlüsselung)
 
-Stellen Sie sicher, dass Sie die benötigten Python-Bibliotheken installieren. Dies kann über die Datei `requirements.txt` erfolgen. Installieren Sie die Anforderungen mit folgendem Befehl:
 
-```bash
-pip install -r requirements.txt
-```
+## Anwendung starten
 
-Inhalt der `requirements.txt`:
+1. **Projekt klonen/herunterladen**:
+   Laden Sie das Repository herunter oder klonen Sie es mit Git:
+   \`\`\`bash
+   git clone <repository-url>
+   cd <repository-ordner>
+   \`\`\`
 
-```plaintext
-cryptography
-tkinter
-```
+2. **Abhängigkeiten installieren**:
+   \`\`\`bash
+   pip install -r requirements.txt
+   \`\`\`
 
-## So starten Sie die Anwendung
-
-1. Klonen oder laden Sie das Repository herunter.
-2. Stellen Sie sicher, dass Python auf Ihrem System installiert ist.
-3. Installieren Sie die Anforderungen wie oben beschrieben.
-4. Starten Sie die Anwendung:
-
-   ```bash
+3. **Programm starten**:
+   \`\`\`bash
    python main.py
-   ```
+   \`\`\`
 
-## Nutzung
+---
 
-1. **Datei auswählen**: Klicken Sie auf "Select File" und wählen Sie die Textdatei aus, die Sie verarbeiten möchten.
-2. **Plugin auswählen**: Wählen Sie ein Plugin aus der Dropdown-Liste aus.
-3. **Zusätzliche Eingaben**:
-   - Wenn ein Plugin zusätzliche Eingaben benötigt (z. B. einen Schlüssel für die Verschlüsselung), geben Sie diese im angezeigten Eingabefeld ein.
-4. **Text verarbeiten**: Klicken Sie auf "Process Text", um das Plugin anzuwenden und das Ergebnis anzuzeigen.
-5. **Ergebnis speichern**: Klicken Sie auf "Save Output", um den verarbeiteten Text in einer Datei zu speichern.
+## Schritt-für-Schritt Anleitung zur Nutzung
 
-### Verschlüsselungsschlüssel-Fenster
+1. **Benutzeroberfläche öffnen**:
+   Starten Sie die Anwendung mit \`python main.py\`. Es öffnet sich eine grafische Oberfläche.
 
-Für Verschlüsselungs-Plugins (wie `enigma`):
-- Nach der Verarbeitung wird ein neues Fenster geöffnet, das den generierten Verschlüsselungsschlüssel anzeigt.
-- Der Schlüssel kann mit der Schaltfläche "Copy Key" in die Zwischenablage kopiert werden.
+2. **Textdatei auswählen**:
+   - Klicken Sie auf die Schaltfläche **"Select File"**.
+   - Navigieren Sie zu einer Textdatei und wählen Sie diese aus.
+
+3. **Plugin auswählen**:
+   - Wählen Sie ein Plugin aus der Dropdown-Liste, z. B. \`Enigma\` oder \`Turing\`.
+   - Jedes Plugin hat spezifische Funktionen (siehe Abschnitt *Plugins*).
+
+4. **Zusätzliche Eingaben bereitstellen** (falls nötig):
+   - Einige Plugins (z. B. Verschlüsselung) erfordern zusätzliche Eingaben wie Schlüssel.
+   - Geben Sie diese im Eingabefeld ein, das angezeigt wird.
+
+5. **Text verarbeiten**:
+   - Klicken Sie auf **"Process Text"**, um das Plugin anzuwenden.
+   - Der verarbeitete Text wird im Hauptfenster angezeigt.
+
+6. **Ergebnis speichern**:
+   - Klicken Sie auf **"Save Output"**, um die Datei zu speichern.
+   - Wählen Sie einen Speicherort und einen Dateinamen.
+
+### Verschlüsselungsschlüssel
+- Wenn ein Plugin (z. B. \`Enigma\`) einen Schlüssel generiert:
+  - Ein separates Fenster zeigt den Schlüssel an.
+  - Klicken Sie auf **"Copy Key"**, um ihn in die Zwischenablage zu kopieren.
+
+---
+
+## Plugins hinzufügen
+
+Plugins werden im Verzeichnis \`plugins\` gespeichert. Sie können neue Plugins erstellen, indem Sie eine Klasse mit einer \`process\`-Methode implementieren. Das Format ist wie folgt:
+
+\`\`\`python
+class Plugin:
+    def process(self, text: str, key: str = None) -> str:
+        # Verarbeitung des Textes hier
+        return processed_text
+\`\`\`
+
+Fügen Sie die neue Plugin-Datei in den Ordner \`plugins\` ein. Beim nächsten Start der Anwendung wird sie automatisch erkannt.
+
+---
 
 ## Plugins
 
-Plugins werden im Ordner `plugins` gespeichert. Sie können neue Plugins hinzufügen, indem Sie eine Klasse mit einer `process`-Methode implementieren. Beispiel:
 
-```python
-class Plugin:
-    def process(self, text: str, key: str = None) -> str:
-        # Text hier verarbeiten
-        return processed_text
-```
+### 1. **Enigma Plugin**
+- Funktion: Verschlüsselt den Text.
+- Besonderheit: Zeigt den generierten Verschlüsselungsschlüssel an, der für die Entschlüsselung benötigt wird.
 
-## Beispiel-Plugins
+### 2. **Turing Plugin**
+- Funktion: Entschlüsselt den Text.
+- Voraussetzung: Ein gültiger Schlüssel muss angegeben werden, um die Entschlüsselung durchzuführen.
 
-- **Enigma Plugin**: Verschlüsselt den Text und zeigt den Verschlüsselungsschlüssel an.
-- **Turing Plugin**: Entschlüsselt Text mit einem angegebenen Schlüssel.
+### 3. **CaseConverter Plugin**
+- Funktion: Ändert die Gross-/Kleinschreibung im Text.
+- Optionen:
+  - Alles kleingeschrieben.
+  - Alles grossgeschrieben.
+  - Nur der erste Buchstabe eines jeden Satzes wird grossgeschrieben.
+
+### 4. **TextSearch Plugin**
+- Funktion: Sucht ein bestimmtes Wort in einer Datei.
+- Ergebnis: Gibt die Anzahl der Vorkommen des Wortes aus.
+
+### 5. **WordCounter Plugin**
+- Funktion: Zählt die Gesamtanzahl der Wörter in einer Datei.
+- Anwendung: Nützlich für Statistiken oder Analyse der Textlänge.
+
+---
+
 
