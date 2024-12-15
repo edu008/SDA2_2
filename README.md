@@ -118,9 +118,10 @@ Bevor wir mit dem GUI arbeiten können, müssen wir zuerst die Plugins verstehen
 Bevor wir anfangen, wollte ich zuerst zeigen mit welcher TXT-Datei wir hier arbeiten:
 
 Dateiname: password.txt
+
 Inhalt:
 
-![alt text](image-9.png)
+![alt text](image-13.png)
 
 Jetzt kann die Anwendung gestartet werden:
 
