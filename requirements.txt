@@ -1,2 +1,2 @@
 cryptography
-tkinter
+#tkinter sollte standardmässig mit Ihrer Python-Installation verfügbar sein. Falls nicht, kann es bei Bedarf über Ihren System-Paketmanager nachinstalliert werden.
