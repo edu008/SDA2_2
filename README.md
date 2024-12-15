@@ -17,22 +17,48 @@ Dies ist eine flexible Textverarbeitungsanwendung, die mit Python und Tkinter en
 ## Voraussetzungen
 
 ### 1. Software
-- **Python 3.x**: Stellen Sie sicher, dass Python installiert ist.
 
-### 2. Benötigte Python-Bibliotheken
-Installieren Sie folgende Bibliotheken:
-- `tkinter` (Standardbibliothek)
-- `cryptography` (für Verschlüsselung)
+1. **[Git](https://git-scm.com/downloads/)**: Zum Klonen des Repositories.  
+   Installiere Git, um Repositories von Plattformen wie GitHub zu klonen und Änderungen zu verwalten.
+
+2. **[Python 3.x](https://www.python.org/downloads/)**: Stellen Sie sicher, dass Python installiert ist.  
+   Besuche den Link, um die neueste Version von Python herunterzuladen und zu installieren.
 
 
-## Anwendung starten
+## **Schritt 1: Git Repository Clonen**
 
-1. **Projekt klonen/herunterladen**:
-   Laden Sie das Repository herunter oder klonen Sie es mit Git:
-   \`\`\`bash
-   git clone <repository-url>
-   cd <repository-ordner>
-   \`\`\`
+**Wichtig:** Bitte wie unter Kapitel Voraussetzung beschrieben zuerst Git installieren, bevor diese Schritte durchgeführt werden.
+
+### Schritte
+1. Öffne die  Eingabeaufforderung.  
+
+2. Navigiere zu dem Ordner, in dem du das Repository speichern möchtest:  
+
+   ```bash
+   cd pfad/zum/ordner
+
+3. Clone das Repository mit folgendem Befehl:
+    ```bash
+    git clone https://github.com/edu008/SDA2_2.git
+
+4. Git erstellt automatisch einen neuen Ordner mit dem Namen des Repositories (SDA2_2) und lädt alle Dateien in diesen Ordner.
+
+Jetzt sollten die Daten aus dem Git-Repository auf deinem Computer im angegebenen Pfad heruntergeladen worden sein, und du kannst mit dem nächsten Schritt fortfahren.
+
+---
+
+## **Schritt 1: Abhängigkeiten installieren**
+1. Öffne die  Eingabeaufforderung.  
+
+2. Navigiere zu dem Ordner, in dem sich das Repository befindet:
+
+![alt text](image.png)
+
+3. Abhängigkeiten installieren
+```bash
+    git clone https://github.com/edu008/SDA2_2.git
+
+
 
 2. **Abhängigkeiten installieren**:
    \`\`\`bash
