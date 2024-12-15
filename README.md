@@ -85,55 +85,8 @@ Nach dem sollte sich automatisch das Programm öffnen und sieht so aus:
 
 ---
 
-## Schritt-für-Schritt Anleitung zur Nutzung
-
-1. **Benutzeroberfläche öffnen**:
-   Starten Sie die Anwendung mit \`python main.py\`. Es öffnet sich eine grafische Oberfläche.
-
-2. **Textdatei auswählen**:
-   - Klicken Sie auf die Schaltfläche **"Select File"**.
-   - Navigieren Sie zu einer Textdatei und wählen Sie diese aus.
-
-3. **Plugin auswählen**:
-   - Wählen Sie ein Plugin aus der Dropdown-Liste, z. B. \`Enigma\` oder \`Turing\`.
-   - Jedes Plugin hat spezifische Funktionen (siehe Abschnitt *Plugins*).
-
-4. **Zusätzliche Eingaben bereitstellen** (falls nötig):
-   - Einige Plugins (z. B. Verschlüsselung) erfordern zusätzliche Eingaben wie Schlüssel.
-   - Geben Sie diese im Eingabefeld ein, das angezeigt wird.
-
-5. **Text verarbeiten**:
-   - Klicken Sie auf **"Process Text"**, um das Plugin anzuwenden.
-   - Der verarbeitete Text wird im Hauptfenster angezeigt.
-
-6. **Ergebnis speichern**:
-   - Klicken Sie auf **"Save Output"**, um die Datei zu speichern.
-   - Wählen Sie einen Speicherort und einen Dateinamen.
-
-### Verschlüsselungsschlüssel
-- Wenn ein Plugin (z. B. \`Enigma\`) einen Schlüssel generiert:
-  - Ein separates Fenster zeigt den Schlüssel an.
-  - Klicken Sie auf **"Copy Key"**, um ihn in die Zwischenablage zu kopieren.
-
----
-
-## Plugins hinzufügen
-
-Plugins werden im Verzeichnis \`plugins\` gespeichert. Sie können neue Plugins erstellen, indem Sie eine Klasse mit einer \`process\`-Methode implementieren. Das Format ist wie folgt:
-
-\`\`\`python
-class Plugin:
-    def process(self, text: str, key: str = None) -> str:
-        # Verarbeitung des Textes hier
-        return processed_text
-\`\`\`
-
-Fügen Sie die neue Plugin-Datei in den Ordner \`plugins\` ein. Beim nächsten Start der Anwendung wird sie automatisch erkannt.
-
----
-
-## Plugins
-
+## Erklärung von GUI und Plugins
+Bevor wir mit dem GUI arbeiten können, müssen wir zuerst die Plugins verstehen. Deshalb erkläre ich kurz die Plugins:
 
 ### 1. **Enigma Plugin**
 - Funktion: Verschlüsselt den Text.
@@ -160,4 +113,98 @@ Fügen Sie die neue Plugin-Datei in den Ordner \`plugins\` ein. Beim nächsten S
 
 ---
 
+## Schritt-für-Schritt Anleitung zur Nutzung
 
+Bevor wir anfangen, wollte ich zuerst zeigen mit welcher TXT-Datei wir hier arbeiten:
+
+Dateiname: password.txt
+Inhalt:
+
+![alt text](image-9.png)
+
+Jetzt kann die Anwendung gestartet werden:
+
+1. Öffne die  Eingabeaufforderung.  
+
+2. Navigiere zu dem Ordner, in dem sich das Repository befindet:
+
+3. **Programm starten**:
+```bash
+    python main.py
+```
+
+Hier wird dokumentiert, wie die einzelnen Plugins auf dem GUI ausgeführt werden:
+
+### 1. **Enigma Plugin**
+
+Mit diesem Plugin sollte die gewählte Datei verschlüsselt werden. Später im Abschnitt "Turing Plugin" sehen wir dann, wie man die Datei wieder entschlüsselt.
+
+1. Klicken Sie auf die Schaltfläche **"Select File"**.
+2. Navigieren Sie zu einer Textdatei und wählen Sie diese aus.
+3. Wählen Sie das Plugin "enigma" aus der Dropdown-Liste
+4. Klicken Sie dann auf "Process Text":
+
+![alt text](image-5.png)
+
+5. Jetzt solltet ihr die nachfolgende Ergebnis erhalten haben:
+
+![alt text](image-6.png)
+
+Sie haben hier einen Entschlüsselungsschlüssel erhalten, die Sie kopieren und sicher ablegen müssen, so dass wir die Datei später entschlüsseln können!
+
+6. Mit "Save Output" kann man die Datei noch am gewünschen Speicherort speichern:
+
+![alt text](image-7.png)
+
+Sie könnne unten auch sehen, wie der Inhalt vom Datei aussieht.
+
+7. Wenn das Speichern erfolgreich war, erhaltet ihr die nachfolgende Meldung:
+
+![alt text](image-8.png)
+
+Man kann es nicht mehr lesen ohne die Entschlüsselung. Jetzt fahren wir mit dem zweiten Plugin fort, um zu sehen wie man es entschlüsselt.
+
+8. Der Inhalt der Datei sieht nun so aus:
+
+![alt text](image-10.png)
+
+Man kann es nicht mehr lesen ohne die Entschlüsselung. Jetzt fahren wir mit dem zweiten Plugin fort, um zu sehen wie man es entschlüsselt.
+
+
+### 2. **CaseConverter Plugin**
+
+Mit diesem Plugin sollten alle Buchstaben im Datei in 
+
+1. Klicken Sie auf die Schaltfläche **"Select File"**.
+2. Navigieren Sie zu der verschlüsselten Textdatei und wählen Sie diese aus.
+3. Wählen Sie das Plugin "turing" aus der Dropdown-Liste
+4. Jetzt müssen Sie noch die Entschlüsslungsschlüssel unter "Enter Key:" eingeben:
+
+![alt text](image-11.png)
+
+5. Drücken Sie nun auf "Process Text" und sie sollten unten im Textfeld die entschlüsselte Inhalt vom Datei sehen:
+
+![alt text](image-12.png)
+
+Wenn Sie möchten, können Sie es auch irgendwo mit dem Button "Save Output" speichern.
+
+
+### 2. **Turing Plugin**
+
+Mit diesem Plugin sollte die gewählte Datei mit der Entschlüsslungsschlüssel wieder entschlüsselt werden.
+
+1. Klicken Sie auf die Schaltfläche **"Select File"**.
+2. Navigieren Sie zu der verschlüsselten Textdatei und wählen Sie diese aus.
+3. Wählen Sie das Plugin "turing" aus der Dropdown-Liste
+4. Jetzt müssen Sie noch die Entschlüsslungsschlüssel unter "Enter Key:" eingeben:
+
+![alt text](image-11.png)
+
+5. Drücken Sie nun auf "Process Text" und sie sollten unten im Textfeld die entschlüsselte Inhalt vom Datei sehen:
+
+
+
+
+
+
+---
