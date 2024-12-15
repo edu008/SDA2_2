@@ -57,7 +57,7 @@ Jetzt sollten die Daten aus dem Git-Repository auf deinem Computer im angegebene
 3. Abhängigkeiten installieren
 ```bash
     git clone https://github.com/edu008/SDA2_2.git
-
+```
 
 
 2. **Abhängigkeiten installieren**:
