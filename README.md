@@ -163,8 +163,6 @@ Sie könnne unten auch sehen, wie der Inhalt vom Datei aussieht.
 
 ![alt text](image-8.png)
 
-Man kann es nicht mehr lesen ohne die Entschlüsselung. Jetzt fahren wir mit dem zweiten Plugin fort, um zu sehen wie man es entschlüsselt.
-
 8. Der Inhalt der Datei sieht nun so aus:
 
 ![alt text](image-10.png)
