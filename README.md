@@ -31,6 +31,7 @@ Inhalt der `requirements.txt`:
 
 ```plaintext
 cryptography
+tkinter
 ```
 
 ## So starten Sie die Anwendung
