@@ -142,7 +142,7 @@ Mit diesem Plugin sollte die gewählte Datei verschlüsselt werden. Später im A
 
 1. Klicken Sie auf die Schaltfläche **"Select File"**.
 2. Navigieren Sie zu einer Textdatei und wählen Sie diese aus.
-3. Wählen Sie das Plugin "enigma" aus der Dropdown-Liste
+3. Wählen Sie das Plugin "enigma" aus der Dropdown-Liste.
 4. Klicken Sie dann auf "Process Text":
 
 ![alt text](./images/image-5.png)
@@ -175,7 +175,7 @@ Mit diesem Plugin sollte die gewählte Datei mit der Entschlüsslungsschlüssel 
 
 1. Klicken Sie auf die Schaltfläche **"Select File"**.
 2. Navigieren Sie zu der verschlüsselten Textdatei und wählen Sie diese aus.
-3. Wählen Sie das Plugin "turing" aus der Dropdown-Liste
+3. Wählen Sie das Plugin "turing" aus der Dropdown-Liste.
 4. Jetzt müssen Sie noch die Entschlüsslungsschlüssel unter "Enter Key:" eingeben:
 
 ![alt text](./images/image-11.png)
@@ -193,21 +193,69 @@ Mit diesem Plugin sollten folgende Möglichkeiten geben:
 - Alles in Kleinbuchstaben
 - Erster Buchstaben von jedem Wort in Grossbuchstaben
 
+In dieser Anleitung werde ich die Option "Uppercase" wählen. Sie können auch die anderen Optionen auswählen, da der Vorgang bei allen gleich ist.
+
 1. Klicken Sie auf die Schaltfläche **"Select File"**.
 2. Navigieren Sie zu einer Textdatei und wählen Sie diese aus.
-3. Wählen Sie das Plugin "case_converter" aus der Dropdown-Liste
-4. Dann wählen Sie unten noch die Option "Choose Option" und klicken Sie auf den gewünschte Option:
+3. Wählen Sie das Plugin "case_converter" aus der Dropdown-Liste.
+4. Sobald Sie "case_coverter" gewählt haben erscheint unten noch ein neuer Button "Choose Option".
+5. Klicken Sie auf "Choose Option" und wählen Sie "Uppercase" aus:
 
 ![alt text](image.png)
 
-5. Ich habe die Option "Uppercase" gewählt und klicke nun auf "Process Text":
+5. Klicken Sie auf "Process Text":
 
+### 4. **TextSearch Plugin**
 
+Mit diesem Plugin können Sie in der Datei nach einem gewünschen Word suchen.
 
+1. Klicken Sie auf die Schaltfläche **"Select File"**.
+2. Navigieren Sie zu einer Textdatei und wählen Sie diese aus.
+3. Wählen Sie das Plugin "text_search" aus der Dropdown-Liste.
+4. Sobald Sie "text_search" gewählt haben erscheint unten ein Textfeld.
+5. Bitte geben Sie im leeren Textfeld nach dem Wort aus, die Sie im Text suchen möchten und klicken Sie auf "Process Text":
 
+![alt text](image-1.png)
 
+6. Nach dem sollte das Resultat unten erscheinen:
 
+![alt text](image-2.png)
 
+7. Mit "Save Output" kann die Ausgabe als eine Textdatei am gewünschten Ort gespeichert werden.
 
+8. Wenn Sie gespeichert haben, sollte die nachfolgende Meldung erscheinen:
+
+![alt text](image-3.png)
+
+9. Der Inhalt der Datei sollte so aussehen:
+
+![alt text](image-4.png)
+
+### 5. **WordCounter Plugin**
+
+Mit diesem Plugin können Sie die Wörter im Textdatei zählen.
+
+1. Klicken Sie auf die Schaltfläche **"Select File"**.
+2. Navigieren Sie zu einer Textdatei und wählen Sie diese aus.
+3. Wählen Sie das Plugin "word_counter" aus der Dropdown-Liste.
+4. Klicken Sie anschliessend auf "Process Text":
+
+![alt text](image-5.png)
+
+5. Nach dem wird das folgende Inhalt unten angezeigt:
+
+![alt text](image-6.png)
+
+Es sind total 15 Wörter in der Datei "password.txt" enthalten.
+
+6. Mit "Save Output" können Sie das Resultat auch am gewünschen Ort speichern.
+
+7. Wenn Sie erfolgreich gespeichert haben, sollte die nachfolgende Meldung erscheinen:
+
+![alt text](image-7.png)
+
+8. Wenn Sie nun die Datei öffnen, sollte der folgende Inhalt ersichtlich sein:
+
+![alt text](image-8.png)
 
 ---
