@@ -167,10 +167,26 @@ Sie könnne unten auch sehen, wie der Inhalt vom Datei aussieht.
 
 ![alt text](image-10.png)
 
-Man kann es nicht mehr lesen ohne die Entschlüsselung. Jetzt fahren wir mit dem zweiten Plugin fort, um zu sehen wie man es entschlüsselt.
+Man kann es nicht mehr lesen ohne die Entschlüsselung. Jetzt fahren wir mit dem zweiten Plugin "Turing" fort, um zu sehen wie man es entschlüsselt.
 
+### 2. **Turing Plugin**
 
-### 2. **CaseConverter Plugin**
+Mit diesem Plugin sollte die gewählte Datei mit der Entschlüsslungsschlüssel wieder entschlüsselt werden.
+
+1. Klicken Sie auf die Schaltfläche **"Select File"**.
+2. Navigieren Sie zu der verschlüsselten Textdatei und wählen Sie diese aus.
+3. Wählen Sie das Plugin "turing" aus der Dropdown-Liste
+4. Jetzt müssen Sie noch die Entschlüsslungsschlüssel unter "Enter Key:" eingeben:
+
+![alt text](image-11.png)
+
+5. Drücken Sie nun auf "Process Text" und sie sollten unten im Textfeld die entschlüsselte Inhalt vom Datei sehen:
+
+![alt text](image-14.png)
+
+Wenn Sie möchten, können Sie es auch irgendwo mit dem Button "Save Output" speichern.
+
+### 3. **CaseConverter Plugin**
 
 Mit diesem Plugin sollten alle Buchstaben im Datei in 
 
@@ -188,18 +204,7 @@ Mit diesem Plugin sollten alle Buchstaben im Datei in
 Wenn Sie möchten, können Sie es auch irgendwo mit dem Button "Save Output" speichern.
 
 
-### 2. **Turing Plugin**
 
-Mit diesem Plugin sollte die gewählte Datei mit der Entschlüsslungsschlüssel wieder entschlüsselt werden.
-
-1. Klicken Sie auf die Schaltfläche **"Select File"**.
-2. Navigieren Sie zu der verschlüsselten Textdatei und wählen Sie diese aus.
-3. Wählen Sie das Plugin "turing" aus der Dropdown-Liste
-4. Jetzt müssen Sie noch die Entschlüsslungsschlüssel unter "Enter Key:" eingeben:
-
-![alt text](image-11.png)
-
-5. Drücken Sie nun auf "Process Text" und sie sollten unten im Textfeld die entschlüsselte Inhalt vom Datei sehen:
 
 
 
