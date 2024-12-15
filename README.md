@@ -188,12 +188,19 @@ Wenn Sie möchten, können Sie es auch irgendwo mit dem Button "Save Output" spe
 
 ### 3. **CaseConverter Plugin**
 
-Mit diesem Plugin sollten alle Buchstaben im Datei in 
+Mit diesem Plugin sollten folgende Möglichkeiten geben:
+- Alles in Grossbuchstaben
+- Alles in Kleinbuchstaben
+- Erster Buchstaben von jedem Wort in Grossbuchstaben
 
 1. Klicken Sie auf die Schaltfläche **"Select File"**.
-2. Navigieren Sie zu der verschlüsselten Textdatei und wählen Sie diese aus.
-3. Wählen Sie das Plugin "turing" aus der Dropdown-Liste
-4. Jetzt müssen Sie noch die Entschlüsslungsschlüssel unter "Enter Key:" eingeben:
+2. Navigieren Sie zu einer Textdatei und wählen Sie diese aus.
+3. Wählen Sie das Plugin "case_converter" aus der Dropdown-Liste
+4. Dann wählen Sie unten noch die Option "Choose Option" und klicken Sie auf den gewünschte Option:
+
+![alt text](image.png)
+
+5. Ich habe die Option "Uppercase" gewählt und klicke nun auf "Process Text":
 
 
 
