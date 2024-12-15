@@ -35,6 +35,8 @@ class TextProcessorApp:
         self.extra_input_label.pack(pady=5)
         self.extra_input_entry = tk.Entry(root)
         self.extra_input_entry.pack(pady=5)
+        self.extra_input_label.pack_forget()
+        self.extra_input_entry.pack_forget()
 
         self.process_btn = tk.Button(root, text="Process Text", command=self.process_text)
         self.process_btn.pack(pady=10)
@@ -63,16 +65,45 @@ class TextProcessorApp:
         # Entferne alte UI-Elemente
         self.extra_input_label.config(text="")
         self.extra_input_entry.pack_forget()
+        
+        
+        if hasattr(self, "extra_input_menu"):
+            self.extra_input_menu.pack_forget()
+            del self.extra_input_menu
 
         # Hole das aktuell ausgewählte Plugin
         plugin_name = self.plugin_var.get()
         if plugin_name in self.core.plugins:
             plugin = self.core.plugins[plugin_name]
+            if getattr(plugin, "text_input_required", False):
+                self.extra_input_label.config(text="Enter search word:")
+                self.extra_input_label.pack(after=self.process_btn, pady=5)
+                self.extra_input_entry.pack(after=self.extra_input_label, pady=5)
+        
 
-            if getattr(plugin, "key_required", False):
+            elif getattr(plugin, "key_required", False):
                 self.extra_input_label.config(text="Enter Key:")
                 self.extra_input_label.pack(after=self.process_btn, pady=5)
                 self.extra_input_entry.pack(after=self.extra_input_label, pady=5)
+            
+            elif getattr(plugin, "options_required", False):
+                self.extra_input_label.config(text="Choose Option:")
+                self.extra_input_label.pack(after=self.process_btn, pady=5)  # Direkt unter "Process Text"
+                self.option_var = tk.StringVar(self.root)
+                self.option_var.set("Select Option")
+                options = ["Uppercase", "Lowercase", "Capitalize Each Word"]
+
+                self.extra_input_menu = tk.OptionMenu(self.root, self.option_var, *options)
+                self.extra_input_menu.pack(after=self.extra_input_label, pady=5)
+            
+        else:
+        # Entferne alle UI-Elemente, falls kein Plugin ausgewählt ist
+                self.extra_input_label.config(text="")
+                self.extra_input_label.pack_forget()
+                if hasattr(self, "extra_input_entry"):
+                    self.extra_input_entry.pack_forget()
+                if hasattr(self, "extra_input_menu"):
+                    self.extra_input_menu.pack_forget()
 
     def process_text(self):
         if not self.file_path:

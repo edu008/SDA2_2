@@ -52,7 +52,7 @@ Jetzt sollten die Daten aus dem Git-Repository auf deinem Computer im angegebene
 
 2. Navigiere zu dem Ordner, in dem sich das Repository befindet:
 
-![alt text](image.png)
+![alt text](./images/image.png)
 
 3. Abhängigkeiten installieren
 ```bash
@@ -61,7 +61,7 @@ Jetzt sollten die Daten aus dem Git-Repository auf deinem Computer im angegebene
 
 Mein Beispiel:
 
-![alt text](image-1.png)
+![alt text](./images/image-1.png)
 
 ---
 
@@ -77,11 +77,11 @@ Mein Beispiel:
 
 Mein Beispiel:
 
-![alt text](image-2.png)
+![alt text](./images/image-2.png)
 
 Nach dem sollte sich automatisch das Programm öffnen und sieht so aus:
 
-![alt text](image-3.png)
+![alt text](./images/image-3.png)
 
 ---
 
@@ -121,7 +121,7 @@ Dateiname: password.txt
 
 Inhalt:
 
-![alt text](image-13.png)
+![alt text](./images/image-13.png)
 
 Jetzt kann die Anwendung gestartet werden:
 
@@ -145,27 +145,27 @@ Mit diesem Plugin sollte die gewählte Datei verschlüsselt werden. Später im A
 3. Wählen Sie das Plugin "enigma" aus der Dropdown-Liste
 4. Klicken Sie dann auf "Process Text":
 
-![alt text](image-5.png)
+![alt text](./images/image-5.png)
 
 5. Jetzt solltet ihr die nachfolgende Ergebnis erhalten haben:
 
-![alt text](image-6.png)
+![alt text](./images/image-6.png)
 
 Sie haben hier einen Entschlüsselungsschlüssel erhalten, die Sie kopieren und sicher ablegen müssen, so dass wir die Datei später entschlüsseln können!
 
 6. Mit "Save Output" kann man die Datei noch am gewünschen Speicherort speichern:
 
-![alt text](image-7.png)
+![alt text](./images/image-7.png)
 
 Sie könnne unten auch sehen, wie der Inhalt vom Datei aussieht.
 
 7. Wenn das Speichern erfolgreich war, erhaltet ihr die nachfolgende Meldung:
 
-![alt text](image-8.png)
+![alt text](./images/image-8.png)
 
 8. Der Inhalt der Datei sieht nun so aus:
 
-![alt text](image-10.png)
+![alt text](./images/image-10.png)
 
 Man kann es nicht mehr lesen ohne die Entschlüsselung. Jetzt fahren wir mit dem zweiten Plugin "Turing" fort, um zu sehen wie man es entschlüsselt.
 
@@ -178,11 +178,11 @@ Mit diesem Plugin sollte die gewählte Datei mit der Entschlüsslungsschlüssel 
 3. Wählen Sie das Plugin "turing" aus der Dropdown-Liste
 4. Jetzt müssen Sie noch die Entschlüsslungsschlüssel unter "Enter Key:" eingeben:
 
-![alt text](image-11.png)
+![alt text](./images/image-11.png)
 
 5. Drücken Sie nun auf "Process Text" und sie sollten unten im Textfeld die entschlüsselte Inhalt vom Datei sehen:
 
-![alt text](image-14.png)
+![alt text](./images/image-14.png)
 
 Wenn Sie möchten, können Sie es auch irgendwo mit dem Button "Save Output" speichern.
 
