@@ -195,14 +195,6 @@ Mit diesem Plugin sollten alle Buchstaben im Datei in
 3. Wählen Sie das Plugin "turing" aus der Dropdown-Liste
 4. Jetzt müssen Sie noch die Entschlüsslungsschlüssel unter "Enter Key:" eingeben:
 
-![alt text](image-11.png)
-
-5. Drücken Sie nun auf "Process Text" und sie sollten unten im Textfeld die entschlüsselte Inhalt vom Datei sehen:
-
-![alt text](image-15.png)
-
-Wenn Sie möchten, können Sie es auch irgendwo mit dem Button "Save Output" speichern.
-
 
 
 
