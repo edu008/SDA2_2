@@ -62,39 +62,51 @@ class TextProcessorApp:
             self.file_label.config(text="No file selected")
 
     def update_extra_input(self, *args):
-        # Entferne alte UI-Elemente
+    # --- UI zurücksetzen ---
+    # Entferne zusätzliche Eingaben
+        self.extra_input_label.pack_forget()
         self.extra_input_label.config(text="")
+        self.extra_input_entry.delete(0, tk.END)  # Löscht den Inhalt des Eingabefeldes
         self.extra_input_entry.pack_forget()
-        
-        
+
+    # Lösche Optionen (Dropdown-Menü), falls vorhanden
         if hasattr(self, "extra_input_menu"):
             self.extra_input_menu.pack_forget()
             del self.extra_input_menu
 
-        # Hole das aktuell ausgewählte Plugin
+    # Lösche Textausgabe und verarbeitete Daten
+        self.text_output.delete(1.0, tk.END)  # Löscht den Inhalt der Textbox
+        self.processed_text = None  # Verarbeitete Daten zurücksetzen
+
+    # --- Plugin-spezifische UI anzeigen ---
         plugin_name = self.plugin_var.get()
         if plugin_name in self.core.plugins:
             plugin = self.core.plugins[plugin_name]
+
+        # Zusätzliche Eingabe für Suchwörter
             if getattr(plugin, "text_input_required", False):
                 self.extra_input_label.config(text="Enter search word:")
                 self.extra_input_label.pack(after=self.process_btn, pady=5)
                 self.extra_input_entry.pack(after=self.extra_input_label, pady=5)
-        
 
+        # Zusätzliche Eingabe für Schlüssel
             elif getattr(plugin, "key_required", False):
                 self.extra_input_label.config(text="Enter Key:")
                 self.extra_input_label.pack(after=self.process_btn, pady=5)
                 self.extra_input_entry.pack(after=self.extra_input_label, pady=5)
-            
+
+        # Dropdown-Menü für Optionen
             elif getattr(plugin, "options_required", False):
                 self.extra_input_label.config(text="Choose Option:")
-                self.extra_input_label.pack(after=self.process_btn, pady=5)  # Direkt unter "Process Text"
+                self.extra_input_label.pack(after=self.process_btn, pady=5)
+
                 self.option_var = tk.StringVar(self.root)
                 self.option_var.set("Select Option")
                 options = ["Uppercase", "Lowercase", "Capitalize Each Word"]
-
                 self.extra_input_menu = tk.OptionMenu(self.root, self.option_var, *options)
                 self.extra_input_menu.pack(after=self.extra_input_label, pady=5)
+
+
             
         else:
         # Entferne alle UI-Elemente, falls kein Plugin ausgewählt ist
@@ -106,55 +118,72 @@ class TextProcessorApp:
                     self.extra_input_menu.pack_forget()
 
     def process_text(self):
-        if not self.file_path:
-            messagebox.showerror("Error", "No file selected.")
-            return
+            if not self.file_path:
+                messagebox.showerror("Error", "No file selected.")
+                return
 
-        plugin_name = self.plugin_var.get()
-        if plugin_name == "None":
-            messagebox.showerror("Error", "No plugin selected.")
-            return
+            plugin_name = self.plugin_var.get()
+            if plugin_name == "None":
+                messagebox.showerror("Error", "No plugin selected.")
+                return
 
-        try:
-            with open(self.file_path, "r") as file:
-                text = file.read()
+            try:
+                with open(self.file_path, "r") as file:
+                    text = file.read()
 
-            plugin = self.core.plugins[plugin_name]
+                plugin = self.core.plugins[plugin_name]
+                extra_input = None
 
-            # Zusätzliche Eingabe wie Schlüssel validieren
-            extra_input = None
-            if hasattr(self, "extra_input_entry") and self.extra_input_entry.get():
-                extra_input = self.extra_input_entry.get()
-
-            # Text verarbeiten
-            if plugin_name == "enigma":
-                result = plugin.process(text)
-                if isinstance(result, tuple) and len(result) == 2:
-                    encrypted_text, encryption_key = result
-
-                    # Zeige Schlüssel in einem Pop-up-Fenster
-                    self.show_key_window(encryption_key)
-
-                    # Speichere verschlüsselten Text
-                    self.processed_text = encrypted_text
-                else:
-                    messagebox.showerror("Error", "Unexpected plugin result format.")
-                    return
-            else:
-                if extra_input:
-                    self.processed_text = plugin.process(text, extra_input)
-                else:
-                    if getattr(plugin, "key_required", False):
-                        messagebox.showerror("Error", "No key provided. Please enter a key.")
+                # Zusätzliche Eingaben je nach Plugin-Typ validieren
+                if getattr(plugin, "key_required", False):
+                    if hasattr(self, "extra_input_entry"):
+                        extra_input = self.extra_input_entry.get()
+                    if not extra_input:
+                        messagebox.showerror("Error", "No key provided.")
                         return
-                    self.processed_text = plugin.process(text)
+                elif getattr(plugin, "options_required", False):
+                    if hasattr(self, "option_var"):
+                        extra_input = self.option_var.get()
+                    if extra_input == "Select Option":
+                        messagebox.showerror("Error", "No option selected.")
+                        return
+                elif getattr(plugin, "text_input_required", False):
+                    if hasattr(self, "extra_input_entry"):
+                        extra_input = self.extra_input_entry.get()
+                    if not extra_input:
+                        messagebox.showerror("Error", "No search word provided.")
+                        return
 
-            # Zeige das Ergebnis in der Textbox an
-            self.text_output.delete(1.0, tk.END)
-            self.text_output.insert(tk.END, self.processed_text)
+        # Verarbeite den Text je nach Plugin-Typ
+                if plugin_name == "enigma":
+                    result = plugin.process(text)
+                    if isinstance(result, tuple) and len(result) == 2:
+                        encrypted_text, encryption_key = result
 
-        except Exception as e:
-            messagebox.showerror("Error", f"Processing failed: {str(e)}")
+                # Zeige Schlüssel in einem Pop-up-Fenster
+                        self.show_key_window(encryption_key)
+
+                # Speichere verschlüsselten Text
+                        self.processed_text = encrypted_text
+                    else:
+                        messagebox.showerror("Error", "Unexpected plugin result format.")
+                        return
+                else:
+                    if extra_input:
+                        self.processed_text = plugin.process(text, extra_input)
+                    else:
+                        if getattr(plugin, "key_required", False):
+                            messagebox.showerror("Error", "No key provided. Please enter a key.")
+                            return
+                        self.processed_text = plugin.process(text)
+
+        # Zeige das Ergebnis in der Textbox an
+                self.text_output.delete(1.0, tk.END)
+                self.text_output.insert(tk.END, self.processed_text)
+
+            except Exception as e:
+                messagebox.showerror("Error", f"Processing failed: {str(e)}")
+    
 
     def show_key_window(self, encryption_key):
         # Erstelle ein Pop-up-Fenster
@@ -188,6 +217,8 @@ class TextProcessorApp:
             with open(save_path, "w") as file:
                 file.write(self.processed_text)
             messagebox.showinfo("Success", f"Processed text saved to {save_path}")
+
+
 
 if __name__ == "__main__":
     root = tk.Tk()

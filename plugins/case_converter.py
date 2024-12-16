@@ -1,9 +1,8 @@
-# plugins/case_converter.py
 class Plugin:
     def __init__(self):
-        self.options_required = True  # Zeigt der UI, dass eine Auswahl benötigt wird
+        self.options_required = True  # Zeigt an, dass Optionen benötigt werden
 
-    def process(self, text: str, option: str = None) -> str:
+    def process(self, text: str, option: str) -> str:
         if option == "Uppercase":
             return text.upper()
         elif option == "Lowercase":
