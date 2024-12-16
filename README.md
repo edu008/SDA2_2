@@ -1,4 +1,32 @@
 
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Textprozessor mit Plugins](#textprozessor-mit-plugins)
+  - [Hauptfunktionen](#hauptfunktionen)
+  - [Voraussetzungen](#voraussetzungen)
+    - [1. Software](#1-software)
+  - [**Schritt 1: Git Repository Clonen**](#schritt-1-git-repository-clonen)
+    - [Schritte](#schritte)
+  - [**Schritt 2: Abhängigkeiten installieren**](#schritt-2-abhängigkeiten-installieren)
+  - [**Schritt 3: Programm starten**](#schritt-3-programm-starten)
+  - [Erklärung von GUI und Plugins](#erklärung-von-gui-und-plugins)
+    - [1. **Enigma Plugin**](#1-enigma-plugin)
+    - [2. **Turing Plugin**](#2-turing-plugin)
+    - [3. **CaseConverter Plugin**](#3-caseconverter-plugin)
+    - [4. **TextSearch Plugin**](#4-textsearch-plugin)
+    - [5. **WordCounter Plugin**](#5-wordcounter-plugin)
+  - [Schritt-für-Schritt Anleitung zur Nutzung](#schritt-für-schritt-anleitung-zur-nutzung)
+    - [1. **Enigma Plugin**](#1-enigma-plugin-1)
+    - [2. **Turing Plugin**](#2-turing-plugin-1)
+    - [3. **CaseConverter Plugin**](#3-caseconverter-plugin-1)
+    - [4. **TextSearch Plugin**](#4-textsearch-plugin-1)
+    - [5. **WordCounter Plugin**](#5-wordcounter-plugin-1)
+
+<!-- /code_chunk_output -->
+
+
 # Textprozessor mit Plugins
 
 Dies ist eine flexible Textverarbeitungsanwendung, die mit Python und Tkinter entwickelt wurde. Sie unterstützt Plugins wie Verschlüsselung, Entschlüsselung und andere Textmanipulationsfunktionen. Die Benutzer können Dateien laden, Plugins anwenden und die Ergebnisse anzeigen oder speichern.
@@ -204,6 +232,11 @@ In dieser Anleitung werde ich die Option "Uppercase" wählen. Sie können auch d
 ![alt text](./images/image-16.png)
 
 5. Klicken Sie auf "Process Text":
+
+![alt text](./images/image-25.png)
+
+
+
 
 ### 4. **TextSearch Plugin**
 
